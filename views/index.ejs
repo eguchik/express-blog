@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express Blog</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Express Blog</h1>
+    <% if (user) { %>
+    <a href="/write">Write</a>
+    <% } %>
+
+    <% if (!user) { %>
+      <a href="/login">login</a>
+    <% } %>
+
+    <% if (user) { %>
+      <a href="/logout">logout</a>
+    <% } %>
+
+
+    <form action="/search" method="POST">
+      <table>
+          <tr>
+              <th>Search</th>
+              <td>
+                  <input type="text" class="title-input" name="search" />
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <button type="submit">更新</button>
+              </td>
+          </tr>
+      </table>
+    <% for(var i=0; i<posts.length; i++) {%>
+      <a href="/detail/<%= posts[i].id%>"><h2><%= posts[i].title%></h2></a>
+      <p><%- posts[i].content%></p>
+    <% } %>
+  </body>
+</html>

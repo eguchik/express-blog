@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express Blog</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <h1>アカウント作成</h1>
+        <form action="/create" method="POST">
+            <table>
+                <tr>
+                    <th>ユーザー名</th>
+                    <td>
+                        <input type="text" class="title-input" name="username" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>パスワード</th>
+                    <td>
+                        <input type="text" class="title-input" name="password" />
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>
+                        <button type="submit">登録</button>
+                    </td>
+                </tr>
+        </table>
+        </form>
+  </body>
+</html>

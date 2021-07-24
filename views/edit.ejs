@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express Blog</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <h1>記事を編集</h1>
+        <form action="/edit/<%= post.id%>" method="POST">
+			<table>
+				<tr>
+					<th>Title</th>
+					<td>
+						<input type="text" class="title-input" name="title" />
+					</td>
+				</tr>
+				<tr>
+					<th>Content</th>
+					<td>
+						<textarea name="content"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th>YouTube URL</th>
+					<td>
+						<textarea name="youtube_url"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<button type="submit">投稿</button>
+					</td>
+				</tr>
+			</table>
+        </form>
+  </body>
+</html>
